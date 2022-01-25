@@ -10,14 +10,20 @@ html {
   body {
     padding: 0;
     margin: 0;
+    font-size: 14px;
   }
   
   h1 {
     font-family: "Gabriela", serif;
   }
+
+  h2 {
+    color: #34474F;
+  }
   
   h2, h3 {
     font-family: 'Prata', serif;
+    
   }
   
   p, ul, li, a {
@@ -80,6 +86,10 @@ html {
   }
   
   @media only screen and (min-width: 550px) {
+    body {
+      font-size: 15px;
+    }
+    
     .header {
       height: auto;
     }
@@ -101,7 +111,7 @@ html {
       bottom: 0;
       opacity: 1;
       background-color: white;
-      color: black;
+      color: #34474F;
     } 
   }
   
@@ -124,13 +134,57 @@ html {
     margin: 20px 20px;
     z-index: 9;
   }
-  
+
+  @media only screen and (min-width:450px) and (max-width:768px) {
+    #widthleft {
+      width: 100%;
+    }
+    #widthright {
+      width: 100%;
+    }
+    
+  }
+
+  @media only screen and (min-width:769px) and (max-width:1042px) {
+    #widthleft {
+      width: 35%;
+      margin-right: 1px;
+      margin-left: 5px;
+    }
+    #widthright {
+      width: 60%;
+      margin-left: 1px;
+      margin-right: 5px;
+    }
+  }
+
+  @media only screen and (min-width:1043px) and (max-width:1400px) {
+    #widthleft {
+      width: 35%;
+      margin-right: 1px;
+      margin-left: 10px;
+    }
+    #widthright {
+      width: 60%;
+      margin-left: 1px;
+      margin-right: 10px;
+    }
+  }
+
+  @media only screen and (min-width:1400px) and (max-width:1500px) {
+    #widthright {
+      width: 800px;
+    }
+  }
+
+  @media only screen and (min-width:1500px) {
+    #widthright {
+      width: 900px;
+    }
+  }
+
   p a {
     color: #34474F;
-  }
-  
-  #widthright {
-    width: 1000px;
   }
   
   .bio h2 {
