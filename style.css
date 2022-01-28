@@ -70,6 +70,7 @@ html {
   
   .annaphoto:hover {
     background-image: url('./Media/01_Anna.jpg');
+    transition: all 0.3s ease;
   }
   
   .info {
@@ -156,6 +157,15 @@ html {
       margin-left: 1px;
       margin-right: 5px;
     }
+
+    .social {
+      flex-direction: column; 
+    }
+
+    .tel-mail {
+      flex-direction: column; 
+    }
+  
   }
 
   @media only screen and (min-width:1043px) and (max-width:1400px) {
@@ -189,4 +199,92 @@ html {
   
   .bio h2 {
     text-align: center;
+  }
+
+/* Telephone and mail */
+
+  .tel-mail {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+  }
+
+  .tel-mail-box {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tel-mail-box a {
+    text-decoration: none;
+  }
+
+/* Social Icons */ 
+
+  .social {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icon {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 25px;
+    background-color: #34474F;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .social-icon i {
+    font-size: 28px;
+    color: white;
+    transition: all 0.3s ease;
+    
+  }
+
+  .social-icon::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translate(0, 50px);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .social-icon.facebook::after {
+    background-color: #385898;
+  }
+
+  .social-icon.linkedin::after {
+    background-color: #0a66c2;;
+  }
+
+  /*.social-icon.instagram::after {
+    background-color: #DD2A7B;
+  }*/
+
+  .social-icon.telegram::after {
+    background-color: #229ED9;;
+  }
+
+  .social-icon:hover {
+    transform: translateY(-4px);
+  }
+
+  .social-icon:hover i {
+    z-index: 1;
+  }
+
+  .social-icon:hover:after {
+    transform: translate(0);
   }
